@@ -1,0 +1,62 @@
+<style>
+    .create_car {
+        margin-left: 2%;
+    }
+
+    mat-grid-list {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+</style>
+
+<mat-grid-list cols="2" rowHeight="8:1">
+    <mat-grid-tile>
+        <mat-form-field appearance="fill">
+            <mat-label>Modelo</mat-label>
+            <input matInput [(ngModel)]="car.modelo" required>
+        </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-form-field appearance="fill">
+            <mat-label>Marca</mat-label>
+            <input matInput [(ngModel)]="car.marca" required>
+        </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-form-field appearance="fill">
+            <mat-label>Ano</mat-label>
+            <input matInput type="number" [(ngModel)]="car.ano" required>
+        </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-form-field appearance="fill">
+            <mat-label>Placa</mat-label>
+            <input matInput [(ngModel)]="car.placa" required>
+        </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-form-field appearance="fill">
+            <mat-label>Chassi</mat-label>
+            <input matInput [(ngModel)]="car.chassi" required>
+        </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-form-field appearance="fill">
+            <mat-label>Renavam</mat-label>
+            <input matInput [(ngModel)]="car.renavam" required>
+        </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile></mat-grid-tile>
+
+    <mat-grid-tile>
+        <button class="create_car" (click)="save()" mat-raised-button color="warn">
+        Salvar
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,41 @@
+<style>
+  mat-grid-list {
+    margin-top: 5%;
+  }
+
+  .create_car {
+    margin-left: 2%;
+  }
+</style>
+
+<mat-grid-list cols="4" rowHeight="1:1">
+  <a routerLink="/editcar/" routerLinkActive="active">
+    <button class="create_car" mat-raised-button color="warn">
+      Criar Carro
+    </button>
+  </a>
+
+  <mat-grid-tile *ngFor="let car of cars">
+    <mat-card>
+      <mat-card-title>{{ car.modelo }} ({{ car.ano }})</mat-card-title>
+      <mat-card-subtitle>Marca: {{ car.marca }}</mat-card-subtitle>
+
+      <mat-card-content>
+        placa: {{ car.placa }} <br>
+        chassi: {{ car.chassi }} <br>
+        renavam: {{ car.renavam }}
+      </mat-card-content>
+
+      <mat-card-actions>
+        <a routerLink="/editcar/{{car.id}}" routerLinkActive="active">
+          <button mat-icon-button>
+            <mat-icon>create</mat-icon>
+          </button>
+        </a>
+        <button mat-icon-button (click)="delete(car.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
