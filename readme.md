@@ -1,5 +1,9 @@
 # No frontend
 
+```
+cd frontend-infosis/
+```
+
 ## Para instalar os pacotes:
 ```
 npm install
@@ -11,6 +15,10 @@ ng serve
 ```
 
 # No backend
+
+```
+cd backend-test-infosis/
+```
 
 ## Para instalar os pacotes:
 ```
